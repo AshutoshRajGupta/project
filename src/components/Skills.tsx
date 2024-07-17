@@ -1,9 +1,64 @@
+// "use client";
+// import React from "react";
+// import TitleText from "./TitleText";
+// import { textVarient } from "@/utils/motion";
+// import { motion } from "framer-motion";
+// import { skills } from "@/utils/data";
+
+// const Skills = () => {
+//   return (
+//     <div>
+//       <TitleText title="My Skills" />
+//       <motion.p
+//         variants={textVarient}
+//         initial="hidden"
+//         whileInView="show"
+//         className="text-white text-center font-mono text-lg p-10 md:px-[25%]"
+//       >
+       
+//   We transform your skills and expertise into powerful tools that not only enhance your capabilities but also inspire and impress your clients and colleagues.
+
+
+//       </motion.p>
+//       <motion.div
+//         variants={textVarient}
+//         initial="hidden"
+//         whileInView="show"
+//         className="flex gap-10 items-center justify-center flex-wrap font-mono mt-10"
+//       >
+//         {skills.map((skill, index) => (
+//           <div
+//             key={index}
+//             className="flex flex-col justify-center items-center gap-5"
+//           >
+//             <div className="flex flex-col justify-center items-center bg-purple-800/5 border-[1px] border-purple-800 w-40 h-40 p-5 rounded-xl hover:bg-purple-500/30 transition duration-1000 ease-in-out">
+//               <img
+//                 src={skill.image}
+//                 className="w-16 h-16 object-cover"
+//                 alt=""
+//               />
+//               <h5 className="font-extrabold text-xl text-gray-500">
+//                 {skill.percentage}
+//               </h5>
+//             </div>
+//             <h2 className="text-purple-500 font-bold text-xl">{skill.name}</h2>
+//           </div>
+//         ))}
+//       </motion.div>
+//     </div>
+//   );
+// };
+
+// export default Skills;
+
+
 "use client";
 import React from "react";
 import TitleText from "./TitleText";
 import { textVarient } from "@/utils/motion";
 import { motion } from "framer-motion";
 import { skills } from "@/utils/data";
+import Image from "next/image";
 
 const Skills = () => {
   return (
@@ -15,10 +70,7 @@ const Skills = () => {
         whileInView="show"
         className="text-white text-center font-mono text-lg p-10 md:px-[25%]"
       >
-       
-  We transform your skills and expertise into powerful tools that not only enhance your capabilities but also inspire and impress your clients and colleagues.
-
-
+        We transform your skills and expertise into powerful tools that not only enhance your capabilities but also inspire and impress your clients and colleagues.
       </motion.p>
       <motion.div
         variants={textVarient}
@@ -32,10 +84,12 @@ const Skills = () => {
             className="flex flex-col justify-center items-center gap-5"
           >
             <div className="flex flex-col justify-center items-center bg-purple-800/5 border-[1px] border-purple-800 w-40 h-40 p-5 rounded-xl hover:bg-purple-500/30 transition duration-1000 ease-in-out">
-              <img
+              <Image
                 src={skill.image}
-                className="w-16 h-16 object-cover"
-                alt=""
+                width={64}
+                height={64}
+                className="object-cover"
+                alt={skill.name}
               />
               <h5 className="font-extrabold text-xl text-gray-500">
                 {skill.percentage}
