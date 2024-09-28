@@ -47,7 +47,7 @@ const Navbar = () => {
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="https://github.com/AshutoshRajGupta" target="_blank">Github</HoveredLink>
                 <HoveredLink href="https://www.linkedin.com/in/ashutosh-raj-gupta-18230820b/" target="_blank">Linkeldn</HoveredLink>
-                <HoveredLink href="https://ashutoshrajgupta.github.io/Me/" target="_blank">Portfolio</HoveredLink>
+                <HoveredLink href="https://project-vert-omega-69.vercel.app/" target="_blank">Portfolio</HoveredLink>
               </div>
             </MenuItem>
           </Menu>

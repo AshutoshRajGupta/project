@@ -5,8 +5,12 @@ import { motion } from "framer-motion";
 import { textVarient } from "@/utils/motion";
 import { BackgroundGradient } from "./ui/background-gradient";
 import { experience } from "@/utils/data";
+import { calculateTotalExperience } from "../utils/experienceno"; // Updated import
 
 const Experience = () => {
+  // Calculate total months and days of experience
+  const { totalMonths, remainingDays } = calculateTotalExperience(experience);
+
   return (
     <div>
       <TitleText title="My Experience" />
@@ -16,13 +20,20 @@ const Experience = () => {
         whileInView="show"
         className="text-white text-center font-mono text-lg p-10 md:px-[25%]"
       >
-       
-      
-  We turn your professional journey and achievements into compelling stories that captivate and motivate both you and your audience.
-
-
-
+        We turn your professional journey and achievements into compelling
+        stories that captivate and motivate both you and your audience.
       </motion.p>
+
+      {/* Display total experience in months and days */}
+      <motion.p
+        variants={textVarient}
+        initial="hidden"
+        whileInView="show"
+        className="text-white text-center font-mono text-xl p-4"
+      >
+        Total Experience: {totalMonths} months and {remainingDays} days
+      </motion.p>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20 mb-40">
         {experience?.map((exp) => (
           <motion.div
@@ -35,6 +46,7 @@ const Experience = () => {
               <p className="text-base sm:text-2xl text-black mt-4 mb-2 dark:text-neutral-200 font-mono">
                 {exp.startDate} - {exp.endDate}
               </p>
+              <p className="text-xl text-neutral-400 font-mono">{exp.company}</p>
               <p className="text-xl text-neutral-400 font-mono">{exp.title}</p>
               <p className="text-gray-400 mt-2 font-mono">{exp.description}</p>
             </BackgroundGradient>

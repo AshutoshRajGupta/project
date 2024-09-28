@@ -86,6 +86,7 @@ export const categories: Category[] = [
   { id: 2, name: "Nextjs" },
   { id: 3, name: "React" },
   { id: 4, name: "Flutter" },
+  { id: 5, name: "UpComing" },
   // Add more categories here
 ];
 
@@ -98,6 +99,7 @@ export const work: Product[] = [
     categoryId: 1,
     link :"https://github.com/AshutoshRajGupta/Ecommerce-Shopping",
   },
+  
   {
     id: 1,
     name: "FLutter Blog App",
@@ -169,6 +171,14 @@ export const work: Product[] = [
     categoryId: 3,
     link :"https://github.com/AshutoshRajGupta/todo_firebase",
 
+  },
+  {
+    id: 10,
+    name: "Upcoming",
+    desc: "coming soon ......",
+    image: "/R.jpeg",
+    categoryId: 5,
+    link :"https://github.com/AshutoshRajGupta/",
   }
 ];
 
@@ -220,6 +230,21 @@ export const skills = [
     percentage: "70%",
     image: "/tailwind.svg",
   },
+  {
+    name: "NextJS",
+    percentage: "60%",
+    image: "/nextjs.svg",
+  },
+  {
+    name: "Flutter",
+    percentage: "70%",
+    image: "/flutter.svg",
+  },
+  {
+    name: "Oracle Responsys Campaign",
+    percentage: "80%",
+    image: "/Oracle-Responsys.png",
+  },
 ];
 
 export const experience = [
@@ -227,16 +252,20 @@ export const experience = [
     id: 1,
     startDate: " AUG 2024",
     endDate: "PRESENT",
-    title: "TRAINEE ENGINEER",
-    description: "SOFTWARE ENGINEER, Working as a software trainee engineer and works on various projects. ",
+    company: "Bitwise Solutions",
+    title: "Trainne Programmer",
+    description: "SOFTWARE ENGINEER, Working as a software trainee engineer and working on Oracle Responsys Project. ",
   },
   {
     id: 2,
     startDate: "FEB 2023",
     endDate: "APR 2023",
-    title: "FULL STACK WEB DEVELOPER",
+    company: "Solar secure solutions",
+    title: "Full stack web Developer",
     description: "FULL STACK DEVELOPER, Working as a full stck developer intern and works on various projects.",
   },
   
   
 ];
+
+
